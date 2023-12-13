@@ -1,0 +1,38 @@
+
+.header {
+  background-color: #282c34;
+  color: white; // Text color for the header
+  display: flex; // Using Flexbox
+  justify-content: center; // Centers content horizontally
+  align-items: center; // Centers content vertically
+  padding: 1rem; // Add some padding
+}
+
+.header nav {
+  width: 100%; // Full width to the nav element
+}
+
+.header ul {
+  list-style: none; // Removes default list styling
+  padding: 0; // Removes default padding
+  margin: 0; // Removes default margin
+  display: flex; // Using Flexbox
+  justify-content: center; // Centers the list items horizontally
+  flex-wrap: wrap; // Allows list items to wrap in smaller screens
+}
+
+.header li {
+  margin: 0 1rem; // Adds horizontal spacing between list items
+}
+
+.header li link {
+  color: white; // Styles the links in white
+  text-decoration: none; // Removes underline from links
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+  .header li {
+    margin: 0.5rem 0; // Stack the items vertically with margin top and bottom
+  }
+}
