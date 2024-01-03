@@ -1,0 +1,27 @@
+.search-bar {
+    position: relative;
+    input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+    }
+    .search-results {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: white;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li {
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+        &:hover {
+          background-color: #f0f0f0;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,58 @@
+// Import your variables
+@import '../../scss/variables.scss';
+
+.contact-form {
+    background-color: $color-cream;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px $color-dark-gray;
+    max-width: 500px;
+    margin: auto;
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        color: $color-brown;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid $color-light-brown;
+        border-radius: 4px;
+        box-sizing: border-box;
+
+        &:focus {
+            outline: none;
+            border-color: $color-yellow;
+        }
+    }
+
+    textarea {
+        resize: vertical;
+        min-height: 100px;
+    }
+
+    button {
+        background-color: $color-yellow;
+        color: $color-dark-gray;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: darken($color-yellow, 10%);
+        }
+    }
+
+    p {
+        color: red;
+        margin-top: -15px;
+        margin-bottom: 10px;
+    }
+}

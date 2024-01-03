@@ -1,0 +1,11 @@
+.products-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem; // Adjust the space between cards as needed
+    margin: 1rem;
+    
+   
+
+}

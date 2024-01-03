@@ -1,12 +1,12 @@
-// components/Layout.js
+// In Layout.js
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, cartItemCount }) => {
   return (
     <>
-      <Header />
+      <Header cartItemCount={cartItemCount} />
       <main>{children}</main>
       <Footer />
     </>
@@ -14,3 +14,4 @@ const Layout = ({ children }) => {
 };
 
 export default Layout;
+
