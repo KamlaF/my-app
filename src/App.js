@@ -2,12 +2,11 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/homepage/HomePage';
 import ProductPage from './pages/ProductPage';
-import CartPage from './pages/CartPage';
+import CartPage from './pages/CartPage'; // Make sure this is where CartItemsList is used
 import CheckoutSuccessPage from './pages/CheckoutSuccessPage';
 import ContactPage from './pages/ContactPage/ContactPage';
 import Layout from './components/Layout';
-import './scss/main.scss'; // Adjust the path based on your file structure
-
+import './scss/main.scss';
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -15,7 +14,7 @@ function App() {
   const onAddToCart = (product, quantity) => {
     const existingItem = cartItems.find(item => item.id === product.id);
     if (existingItem) {
-      setCartItems(cartItems.map(item => 
+      setCartItems(cartItems.map(item =>
         item.id === product.id ? { ...item, quantity: item.quantity + quantity } : item
       ));
     } else {
@@ -23,9 +22,9 @@ function App() {
     }
   };
 
- const clearCart = () => {
-  setCartItems([]); // This should update the state and cause a re-render
-};
+  const clearCart = () => {
+    setCartItems([]); // This should update the state and cause a re-render
+  };
 
   const cartItemCount = cartItems.reduce((count, item) => count + item.quantity, 0);
 
@@ -45,3 +44,4 @@ function App() {
 }
 
 export default App;
+

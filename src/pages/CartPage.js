@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import CartItemsList from '../components/CartPage/CartItemList';
-import CheckoutHandler from '../components/CheckOutHandler';
-
 
 const CartPage = ({ cartItems, clearCart }) => {
   const [checkoutInitiated, setCheckoutInitiated] = useState(false);
@@ -18,7 +16,6 @@ const CartPage = ({ cartItems, clearCart }) => {
   const onCheckoutComplete = () => {
     console.log("Checkout completed");
     clearCart(); // Clears the cart
-    setCheckoutInitiated(false); // Resets the checkout initiated flag
     navigate('/checkout-success'); // Navigates to the success page
   };
 
@@ -26,13 +23,11 @@ const CartPage = ({ cartItems, clearCart }) => {
     <div>
       <h1>Cart</h1>
       <CartItemsList cartItems={cartItems} onCheckout={onCheckout} />
-
-      {checkoutInitiated && (
-        <CheckoutHandler onCheckoutComplete={onCheckoutComplete} />
-      )}
+      {checkoutInitiated && <button onClick={onCheckoutComplete}>Complete Checkout</button>}
     </div>
   );
 };
 
 export default CartPage;
+
 
