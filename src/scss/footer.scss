@@ -1,0 +1,48 @@
+@import "variables";
+
+// Body and HTML need to be set to 100% height
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+// The main content container should flex and grow to push the footer down
+.main-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; // Viewport height
+}
+
+.footer-container {
+  background-color: $color-cream;
+  color: rgb(22, 21, 21);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-top: 1px solid $color-dark-gray;
+  margin-top: auto; // Pushes the footer to the bottom
+}
+
+.footer-home-link {
+  margin-right: 2rem;
+}
+
+.footer-home-link a {
+  color: rgb(17, 17, 17);
+  text-decoration: none;
+}
+
+.footer-rights {
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    flex-direction: column;
+  }
+  
+  .footer-home-link {
+    margin-bottom: 1rem;
+  }
+}

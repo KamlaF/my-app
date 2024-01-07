@@ -3,8 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import CartIcon from './cartIcon/CartIcon';
 
-// The Header component with navigation links and the CartIcon.
-// The cartItemCount is passed as a prop from the parent component.
+
 const Header = ({ cartItemCount }) => {
     // Header.js
 console.log("Cart item count in Header:", cartItemCount);
