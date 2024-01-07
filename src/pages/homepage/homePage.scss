@@ -1,3 +1,5 @@
+@import '../../scss/variables.scss';
+
 .products-list{
     display: flex;
     flex-direction: row;
@@ -8,4 +10,33 @@
     
    
 
+}
+
+.parent-container {
+  display: flex;
+  justify-content: center; // Centers horizontally in the flex container
+  align-items: center; // Centers vertically in the flex container
+  height: 10vh; // Example height, adjust as needed
+}
+
+.homeH1 {
+  font-family: 'Arial', sans-serif; 
+  font-size: 2.5rem; 
+  color: $color-brown; 
+  text-transform: uppercase; 
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.1); 
+  padding: 0.5rem 1rem; 
+  border-radius: 10px; 
+  background-image: linear-gradient(45deg, rgb(232, 228, 230), rgb(237, 234, 217)); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+  display: inline-block; 
+  margin: 1rem 0; 
+  transform: skew(-10deg); 
+  transition: all 0.3s ease; 
+
+  &:hover {
+    transform: skew(0deg) scale(1.1); 
+    background-image: linear-gradient(45deg, #fa0, rgb(231, 239, 243)); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
 }

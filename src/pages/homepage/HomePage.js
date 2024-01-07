@@ -15,8 +15,7 @@ const HomePage = () => {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
-        // Assuming 'data' is the array of products directly
-        setProducts(data); // If 'data' itself is the array of products
+        setProducts(data); 
       } catch (error) {
         console.error("Fetch error:", error);
       }
@@ -27,21 +26,23 @@ const HomePage = () => {
   
   
 
-  // Filter products based on the search term
+ 
   const filteredProducts = searchTerm
     ? products.filter(product =>
         product.title.toLowerCase().includes(searchTerm.toLowerCase())
       )
     : products;
 
-  // Debugging: Log the products and filteredProducts
+  
   console.log('Products:', products);
   console.log('Filtered Products:', filteredProducts);
 
   return (
     <div className="home-page">
       <SearchBar onSearchTermChange={setSearchTerm} />
-      <h1>Products</h1>
+      <div className='parent-container'>
+      <h1 className='homeH1'>Products</h1>
+      </div>
       <div className="products-list">
         {filteredProducts.map(product => (
           <Product key={product.id} product={product} />

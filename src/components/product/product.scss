@@ -1,7 +1,6 @@
 
   
     .product-card {
-      //flex: 1 1 calc(25% - 1rem); // Subtract the gap from the width
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -35,19 +34,19 @@
         border: none;
         border-radius: 0.3rem;
         text-decoration: none;
-        background-color: #007bff;
+        background-color: #241c01;
         color: white;
         cursor: pointer;
         transition: background-color 0.3s;
   
         &:hover {
-          background-color: darken(#007bff, 5%);
+          background-color: darken(#b1b91b, 5%);
         }
       }
     }
   
   
-  // Media query for responsiveness
+ 
   @media (max-width: 1200px) {
     .products-container .product-card {
       flex: 1 1 calc(33.333% - 1rem); // 3 cards in a row

@@ -15,8 +15,9 @@ const SingleProduct = ({ product, onAddToCart }) => {
 
     return (
         <div className="singleProduct-card">
-            <img src={product.imageUrl} alt={product.title} />
-            <h3>{product.title}</h3>
+            <h1 className='toyCarH1'>{product.title}</h1>
+            <img className='singleImg' src={product.imageUrl} alt={product.title} />
+            
             <p>{product.description}</p>
             {hasDiscount ? (
                 <>
@@ -39,7 +40,7 @@ const SingleProduct = ({ product, onAddToCart }) => {
                     ))}
                 </div>
             )}
-            {/* Add to Cart functionality */}
+            
             <div className="add-to-cart">
                 <button onClick={handleAddToCart}>Add to cart</button>
                 

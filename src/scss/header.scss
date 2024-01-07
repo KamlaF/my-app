@@ -1,19 +1,20 @@
+@import "variables";
 
 .header {
-  background-color: #282c34;
-  color: white; // Text color for the header
-  display: flex; // Using Flexbox
-  justify-content: center; // Centers content horizontally
-  align-items: center; // Centers content vertically
-  padding: 1rem; // Add some padding
+  background-color: $color-cream;
+  color: rgb(22, 21, 21); 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  padding: 1rem; 
 }
 
 .header nav {
-  width: 100%; // Full width to the nav element
+  width: 100%; 
 }
 
 .header ul {
-  list-style: none; // Removes default list styling
+  list-style: none; 
   padding: 0; // Removes default padding
   margin: 0; // Removes default margin
   display: flex; // Using Flexbox
@@ -26,7 +27,7 @@
 }
 
 .header li a {
-  color: white; // Styles the links in white
+  color: rgb(17, 17, 17); // Styles the links in white
   text-decoration: none; // Removes underline from links
 }
 

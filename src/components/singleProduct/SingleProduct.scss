@@ -1,67 +1,106 @@
 @import '../../scss/variables.scss';
 
-.singleProduct-card
-   {
-    //flex: 1 1 calc(25% - 1rem); // Subtract the gap from the width
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
+.singleProduct-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-size: 400% 400%;
+  min-width: 200px; // Minimum width
+  min-height: 300px; // Minimum height
+  max-width: 80%; // Maximum width to not stretch too much on wider screens
+  margin: 2rem auto; // Top and bottom margin 2rem, left and right auto for centering
+  animation: Gradient 15s ease infinite;
+  background-image: linear-gradient(45deg, #ffffff, $color-yellow, $color-light-brown, $color-cream);
+}
+
+
+@keyframes Gradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+
+
+
+  .singleImg {
     border-radius: 0.5rem;
-    background: #fff;
-    width: 300px;
-    height: 500px;
-   
+    max-width: 30%;
+    height: auto; }
 
-    img {
-      border-radius: 0.5rem;
-      width: 200px;
+  .toyCarH1 {
+  font-family: 'Arial', sans-serif; 
+  font-size: 2.5rem; 
+  color: $color-brown; 
+  text-transform: uppercase; 
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.1); 
+  padding: 0.5rem 1rem; 
+  border-radius: 10px; 
+  background-image: linear-gradient(45deg, rgb(232, 228, 230), rgb(237, 234, 217)); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+  display: inline-block; 
+  margin: 1rem 0; 
+  transform: skew(-10deg); 
+  transition: all 0.3s ease; 
 
-     
-    }
+  &:hover {
+    transform: skew(0deg) scale(1.1); 
+    background-image: linear-gradient(45deg, #fa0, rgb(231, 239, 243)); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+}
 
-    h3 {
-      margin-top: 0.5rem;
-    }
 
-    p {
-      text-align: center;
-    }
+@media (max-width: 600px) {
+  .toyCarH1 {
+    font-size: 2rem; 
+    padding: 0.3rem 0.8rem; 
+    transform: skew(0deg); 
+  }
+}
 
-    a {
-      margin-top: auto; // Pushes the link to the bottom of the container
-      padding: 0.5rem 1rem;
-      border: none;
-      border-radius: 0.3rem;
-      text-decoration: none;
-      background-color: #007bff;
-      color: white;
-      cursor: pointer;
-      transition: background-color 0.3s;
 
-      &:hover {
-        background-color: darken(#007bff, 5%);
-      }
+  p {
+    text-align: center;
+  }
+
+  .add-to-cart button {
+    margin-top: auto; 
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.3rem;
+    background-color: $color-brown; // Assuming you have a primary color variable
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken($color-dark-gray, 10%);
     }
   }
 
 
 // Media query for responsiveness
 @media (max-width: 1200px) {
-  .products-container .product-card {
-    flex: 1 1 calc(33.333% - 1rem); // 3 cards in a row
+  .singleProduct-card {
+    max-width: 70%; // Adjust width as per your design requirements
   }
 }
 
 @media (max-width: 900px) {
-  .products-container .product-card {
-    flex: 1 1 calc(50% - 1rem); // 2 cards in a row
+  .singleProduct-card {
+    max-width: 90%; // Adjust width as per your design requirements
   }
 }
 
 @media (max-width: 600px) {
-  .products-container .product-card {
-    flex: 1 1 100%; // 1 card in a row
+  .singleProduct-card {
+    max-width: 95%; // Adjust width as per your design requirements
   }
 }

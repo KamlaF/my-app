@@ -1,0 +1,28 @@
+@import '../../scss/variables.scss';
+
+.cartPage-H1 {
+  text-align: center;
+  color: $color-dark-gray; // Assuming you want to use one of your predefined colors
+  margin-bottom: 20px;
+}
+
+.complete-checkout-button {
+  display: block;
+  width: 100%;
+  max-width: 300px; // You can adjust this width as needed
+  margin: 20px auto;
+  padding: 15px 30px;
+  background-color: $color-yellow; // Choose a color that makes the button pop
+  color: $color-brown; // Contrast color for the text
+  font-size: 1.5em; // Larger font size for visibility
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Optional: adds a shadow for a "pop-up" effect
+  transition: background-color 0.3s, transform 0.3s;
+
+  &:hover {
+    background-color: darken($color-yellow, 10%); // Darken the button on hover for effect
+    transform: translateY(-2px); // Slight raise on hover
+  }
+}

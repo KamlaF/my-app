@@ -1,0 +1,45 @@
+
+@import '../../scss/variables.scss';
+
+
+.checkout-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; // Full viewport height
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.checkOutSuccess-H1 {
+  color: $color-dark-gray; // Assuming you want to use one of your predefined colors
+  margin-bottom: 20px;
+}
+
+.checkOutSuccess-P {
+  color: $color-brown; // Adjust as per your color scheme
+  margin-bottom: 20px;
+}
+
+a {
+  display: inline-block;
+  background-color: $color-yellow; // Choose a color that stands out
+  color: $color-brown;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: darken($color-yellow, 10%); // Change on hover for effect
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .checkout-success {
+    padding: 10px;
+  }
+}

@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/homepage/HomePage';
 import ProductPage from './pages/ProductPage';
-import CartPage from './pages/CartPage'; // Make sure this is where CartItemsList is used
-import CheckoutSuccessPage from './pages/CheckoutSuccessPage';
+import CartPage from './pages/CartPage/CartPage'; // Make sure this is where CartItemsList is used
+import CheckoutSuccessPage from './pages/CheckOutSuccessPage/CheckoutSuccessPage';
 import ContactPage from './pages/ContactPage/ContactPage';
 import Layout from './components/Layout';
 import './scss/main.scss';
