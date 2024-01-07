@@ -17,7 +17,6 @@ const ProductPage = ({ onAddToCart }) => {
         fetchProduct();
     }, [productId]);
 
-   // ProductPage.js
 return product && <SingleProduct product={product} onAddToCart={onAddToCart} />;
 
 };

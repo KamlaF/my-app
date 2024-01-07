@@ -18,11 +18,11 @@
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Optional: adds a shadow for a "pop-up" effect
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
   transition: background-color 0.3s, transform 0.3s;
 
   &:hover {
-    background-color: darken($color-yellow, 10%); // Darken the button on hover for effect
-    transform: translateY(-2px); // Slight raise on hover
+    background-color: darken($color-yellow, 10%); 
+    transform: translateY(-2px); 
   }
 }

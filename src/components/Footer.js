@@ -5,10 +5,10 @@ const Footer = () => {
   return (
     <footer className="footer-container">
       <div className="footer-home-link">
-        <Link to="/home">Home</Link> {/* Link to the Home page */}
+        <Link to="/home">Home</Link> 
       </div>
       <div className="footer-rights">
-        © {new Date().getFullYear()} All Rights Reserved {/* Dynamic year */}
+        © {new Date().getFullYear()} All Rights Reserved 
       </div>
     </footer>
   );

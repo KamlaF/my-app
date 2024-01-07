@@ -5,7 +5,7 @@ import CartIcon from './cartIcon/CartIcon';
 
 
 const Header = ({ cartItemCount }) => {
-    // Header.js
+    
 console.log("Cart item count in Header:", cartItemCount);
 
   return (
